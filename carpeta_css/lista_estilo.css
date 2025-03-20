@@ -1,0 +1,42 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+#tareas {
+    list-style: none;
+    padding: 0;
+}
+li {
+    background: wheat;
+    color: black;
+    border: none;
+    padding: 5px;
+    margin: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+button {
+    background: rgb(45, 6, 119);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    transition: background 0.3s, transform 0.3s;
+}
+button:hover {
+    background: rgb(60, 20, 150);
+    transform: scale(1.05);
+}
+button:active {
+    background: rgb(30, 10, 90);
+    transform: scale(0.95);
+}
+input{
+    margin-top: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
