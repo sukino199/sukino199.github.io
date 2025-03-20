@@ -1,7 +1,7 @@
 const CACHE_NAME = 'tareas-cache-v1';
 const urlsToCache =[
     './',
-    './copia_de_lista.html',
+    './index.html',
     './carpeta_css/estilo.css',
     './carpeta_java/lista.js',
     './imagen/iconoLista.png',
