@@ -3,10 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="carpeta_css/lista_estilo.css"
-    <link rel="manifest" href="manifest.json"><!--agregar manifiesto-->
-
-    <title>Documents</title>
+    <link rel="stylesheet" href="carpeta_css/lista_estilo.css">
+    <link rel="manifest" href="manifest.json">
+    <title>Lista de Tareas</title>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+                    console.log('ServiceWorker registration successful with scope: ', registration.scope);
+                }, function(error) {
+                    console.log('ServiceWorker registration failed: ', error);
+                });
+            });
+        }
+    </script>
 </head>
 <body>
     <h2>Lista de tareas</h2>
@@ -14,18 +24,7 @@
     <button onclick="agregarTarea()">Agregar</button>
 
     <ul id="tareas"></ul>
-    
+
     <script src="carpeta_java/lista.js"></script>
-    <script>
-    if ('serviceWorker' in navigator) {
-        window.addEventListener('load', function() {
-            navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
-                console.log('ServiceWorker registration successful with scope: ', registration.scope);
-            }, function(error) {
-                console.log('ServiceWorker registration failed: ', error);
-            });
-        });
-    }
-</script>
 </body>
 </html>
